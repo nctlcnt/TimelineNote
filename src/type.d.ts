@@ -12,3 +12,7 @@ export type TagType = {
     children: TagType[]
 }
 
+export type InitDataType = {
+    initNotes: NoteEntryType[]
+    initTags: TagType[]
+}

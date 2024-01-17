@@ -1,5 +1,22 @@
 {
+  "ts-node": {
+    "require": [
+      "tsconfig-paths/register"
+    ]
+  },
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@globalContext/*": [
+        "src/globalContext/*"
+      ]
+    },
     "target": "es5",
     "lib": [
       "dom",

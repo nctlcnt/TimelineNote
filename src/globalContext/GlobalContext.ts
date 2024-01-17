@@ -4,6 +4,8 @@ import {NoteEntryType} from "../type";
 export type GlobalContextType = {
     notes: NoteEntryType[]
     setNotes: Dispatch<NoteEntryType[]>
+    rightDrawerOpen: boolean
+    setRightDrawerOpen: Dispatch<boolean>
 }
 
 class GlobalContextClass {
