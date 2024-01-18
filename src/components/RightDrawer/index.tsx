@@ -5,9 +5,14 @@ import GlobalContext from '@globalContext/GlobalContext'
 
 const RightDrawer = () => {
     const { rightDrawerOpen: open, setRightDrawerOpen } = React.useContext(GlobalContext)
-    console.log(open)
+
     return (
-        <Drawer anchor={'right'} open={open} onClose={()=>setRightDrawerOpen(false)}>
+        <Drawer anchor={'right'} open={open} onClose={() => setRightDrawerOpen(false)}
+                sx={{
+                    '.MuiPaper-root': {
+                        maxWidth: '40%',
+                    },
+                }}>
             <DrawerContent />
         </Drawer>
     )

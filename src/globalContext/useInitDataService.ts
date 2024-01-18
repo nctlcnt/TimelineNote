@@ -1,20 +1,17 @@
-import notesData from '../data/notes.json'
-import tagsData from '../data/tags.json'
+import data from '../data/data.json'
 import { InitDataType } from '@/type'
 import { useMemo } from 'react'
 
 
 const useInitDataService = (): InitDataType => {
-    const initNotes = useMemo(() => {
-        return notesData
-    }, [])
-    const initTags = useMemo(() => {
-        return tagsData
+
+    const initData = useMemo(() => {
+        return data
     }, [])
 
     return {
-        initNotes,
-        initTags,
+        initNotes: initData.notes,
+        initTags: initData.tags,
     }
 }
 export default useInitDataService

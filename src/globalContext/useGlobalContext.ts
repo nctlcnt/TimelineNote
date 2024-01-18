@@ -1,14 +1,22 @@
 import useInitDataService from '@globalContext/useInitDataService'
 import { useEffect, useState } from 'react'
-import { NoteEntryType } from '@/type'
+import { NoteEntryType, TagType } from '@/type'
 
 const useGlobalContext = () => {
     const { initNotes, initTags } = useInitDataService()
     const [notes, setNotes] = useState<NoteEntryType[]>([])
+    const [tags, setTags] = useState<TagType[]>([])
 
     const [rightDrawerOpen, setRightDrawerOpen] = useState(false)
+    useEffect(() => {
+        setNotes(initNotes)
+    }, [initNotes])
 
-    console.log(initNotes, initTags)
+    // initiate tags
+    useEffect(() => {
+        setTags(initTags)
+    }, [initTags])
+
 // scroll to bottom on new note
     useEffect(() => {
         const element = document.getElementById('timeline')
@@ -18,6 +26,8 @@ const useGlobalContext = () => {
     }, [notes])
 
     return {
+        tags,
+        setTags,
         notes,
         setNotes,
         rightDrawerOpen,

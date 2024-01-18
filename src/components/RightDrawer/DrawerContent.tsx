@@ -1,11 +1,19 @@
 import React from 'react'
-import { Box, Button } from '@mui/material'
+import { Box, Button, Chip, Divider } from '@mui/material'
+import GlobalContext from '@globalContext/GlobalContext'
+import useDrawerContentService from '@components/RightDrawer/useDrawerContentService'
 
 const DrawerContent = () => {
-    // TODO: add backup data to JSON
+    const { tags, notes } = React.useContext(GlobalContext)
+    const { onSaveButtonClick, tagList } = useDrawerContentService({ notes, tags })
+
     return (
         <Box p={1}>
-            <Button variant={'outlined'}>Backup data to JSON</Button>
+            <Button variant={'outlined'} onClick={onSaveButtonClick}>Backup data to JSON</Button>
+            <Divider sx={{ my: 1 }} />
+            <Box>
+                {tagList.map((tag: any) => <Chip key={tag} label={tag} sx={{ mr: 1, mb: 1 }} />)}
+            </Box>
         </Box>
     )
 }

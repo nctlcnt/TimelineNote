@@ -1,11 +1,13 @@
 import {createContext, Dispatch} from 'react';
-import {NoteEntryType} from "../type";
+import { NoteEntryType, TagType } from '../type'
 
 export type GlobalContextType = {
     notes: NoteEntryType[]
     setNotes: Dispatch<NoteEntryType[]>
     rightDrawerOpen: boolean
     setRightDrawerOpen: Dispatch<boolean>
+    tags: TagType[]
+    setTags: Dispatch<TagType[]>
 }
 
 class GlobalContextClass {

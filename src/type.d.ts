@@ -8,8 +8,8 @@ export type NoteEntryType = {
 export type TagType = {
     tagId: string
     tagName: string
-    parentId: string
-    children: TagType[]
+    parentId?: string
+    children?: TagType[]
 }
 
 export type InitDataType = {
