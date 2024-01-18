@@ -1,11 +1,11 @@
-> Not sure what this will be...
-> 
-> But I'm enjoying building it
-> 
-> Maybe learn some new things from it
+# Building a new project for fun
 
-Used in this project: Typescript, React, date-fns, material-ui
+Not sure what this will be...
 
-Adding `craco` and `tsconfig-paths-webpack-plugin` to the project to allow alias imports.
+But I'm enjoying building it
 
-Reference: [ts-monorepo](https://github.com/NiGhTTraX/ts-monorepo#create-react-app)
+
+**Used in this project**: Typescript, React, date-fns, material-ui, and more
+
+## Notes
+> Adding `craco` and `tsconfig-paths-webpack-plugin` to the project to allow alias imports. - Reference: [ts-monorepo](https://github.com/NiGhTTraX/ts-monorepo#create-react-app)
