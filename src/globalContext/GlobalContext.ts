@@ -1,5 +1,5 @@
-import {createContext, Dispatch} from 'react';
-import { NoteEntryType, TagType } from '../type'
+import { createContext, Dispatch } from 'react'
+import { NoteEntryType, TagType } from '@/type'
 
 export type GlobalContextType = {
     notes: NoteEntryType[]
@@ -8,6 +8,8 @@ export type GlobalContextType = {
     setRightDrawerOpen: Dispatch<boolean>
     tags: TagType[]
     setTags: Dispatch<TagType[]>
+    createTag: (value: string) => void
+    createNote: (value: string, tags: string[]) => void
 }
 
 class GlobalContextClass {
@@ -23,5 +25,5 @@ class GlobalContextClass {
 }
 
 
-const MyContext = createContext(new GlobalContextClass() as GlobalContextType);
-export default MyContext;
+const MyContext = createContext(new GlobalContextClass() as GlobalContextType)
+export default MyContext

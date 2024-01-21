@@ -4,7 +4,6 @@ import { useMemo } from 'react'
 
 
 const useInitDataService = (): InitDataType => {
-
     const initData = useMemo(() => {
         return data
     }, [])

@@ -10,6 +10,7 @@ export type TagType = {
     tagName: string
     parentId?: string
     children?: TagType[]
+    lastUpdated?: number // timestamp
 }
 
 export type InitDataType = {
